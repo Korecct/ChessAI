@@ -390,7 +390,7 @@
 
         .author-links a {
             color: var(--icon-color);
-            font-size: 1.5rem;
+            font-size: 2.0rem;
             transition: color 0.3s;
         }
 
@@ -469,7 +469,7 @@
 
             /* Responsive Author Links */
             .author-links a {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
         }
 
@@ -494,6 +494,7 @@
 
             .links-box {
                 width: 100%;
+                padding: 1px;
             }
 
             .author-photo {
