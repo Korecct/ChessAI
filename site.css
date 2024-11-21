@@ -47,7 +47,7 @@
         /* Main Content Styling */
         .container {
             flex: 1;
-            padding: 20px 20px 20px 20px;
+            padding: 0px 20px 20px 20px;
             margin: 0 auto;
             box-sizing: border-box;
         }
@@ -232,7 +232,7 @@
             background-color: var(--section-bg);
             border: 2px solid var(--section-border);
             border-radius: 10px;
-            padding: 20px;
+            padding: 10px 20px 20px;
             box-shadow: 0 4px 8px var(--card-shadow);
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
@@ -479,7 +479,7 @@
             }
 
             .container {
-                padding: 80px 10px 10px 10px;
+                padding: 0px 10px 10px 10px;
             }
 
             .chess-gif {
