@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <title>ChessAI</title>
+    <link rel="icon" type="image/x-icon" href="images\favicon.ico">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Main Content Area -->
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>ChessAI - Senior Project</h1>
+            <p>A Web chess game with AI opponents and Seamless Online PVP</p>
+        </header>
+
+        <!-- Chess Board GIF -->
+        <div class="chess-gif-container">
+            <img src="images\GameFlow.gif" alt="Chess AI in Action" class="chess-gif" loading="lazy">
+        </div>
+
+        <!-- Play Button -->
+         <!--
+        <div class="play-button-container">
+            <a href="" class="gamemode-button">Play Now</a>
+        </div>
+        -->
+
+        <!-- Two Column Layout -->
+        <div class="two-column-container">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Quick Links -->
+                <div class="links-box">
+                    <h3>Quick Links & Info</h3>
+                    <h4>SP-14-Green ChessAI | CS-4850 - Fall 2024</h4>
+                    <!-- College Logo 
+                    <img src="" alt="Owls Logo" class="logo">
+                    -->
+                    <ul>
+                        <li><a href="https://github.com/S-14Chess-p/Senior-Project-ChessAI" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=qvlhWKqCj00" target="_blank"><i class="fas fa-video"></i> Demo Video</a></li>
+                    </ul>
+                </div>
+
+                <!-- Documents -->
+                <div class="links-box">
+                    <h3>Documents</h3>
+                    <ul>
+                        <li><a href="documents\projectPlan.pdf" target="_blank"><i class="fas fa-file-alt"></i> Project Plan</a></li>
+                        <li><a href="documents\req-docs.pdf" target="_blank"><i class="fas fa-list-alt"></i> Requirements</a></li>
+                        <li><a href="documents\design-doc.pdf" target="_blank"><i class="fas fa-pencil-ruler"></i> Design Document</a></li>
+                        <li><a href="documents\unfinished final report.pdf.pdf" target="_blank"><i class="fas fa-clipboard-check"></i> Final Report</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="description-section">
+                    <h3>About ChessAI</h3>
+                    <div class="description-content">
+                        <div class="description-text">
+                            <h4>Online PvP</h4>
+                            <p>The Online PvP gamemode allows two players to play against each other over the internet in realtime. Using a randomly generated lobby code, this gamemode allows for a simplistic way to connect two players to the game. The board is also properly oriented for the player, so their pieces will always be at the correct as is expected if they were playing in person.</p>
+                            <h4>Player vs AI</h4>
+                            <p>Our player versus AI allows a user to play against different types of AIs developed for this game. We currently offer two main AIs to play against, which are our Minimax AI and our SmartyAI. Our Minimax AI is based off the minimax algorithim, a powerful algorithm that allows for intelligent gameplay algorithm does this by the use of weights per piece and simulating possible moves number a certain amount of turns in the future. Our smartyAI is our custom AI that is based on a simple custom algorithm. It is designed to be a light and easy AI to engage against, perfect for beginners.</p>
+                        </div>
+                        <div class="description-images">
+                            <figure>
+                                <img src="images\PvP.gif" alt="Online PvP" loading="lazy">
+                                <figcaption>Online PvP</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images\GameFlow.gif" alt="Player vs AI" loading="lazy">
+                                <figcaption>Player vs AI</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Authors Section -->
+        <div class="authors-box">
+            <h3>Meet the Team</h3>
+            <div class="authors-list">
+                <div class="author-card">
+                    <img src="images\MatthewC-Photo.png" alt="Matthew Corvacchioli - Website Lead & AI Developer" class="author-photo">
+                    <div class="author-info">
+                        <h4>Matthew Corvacchioli</h4>
+                        <p>Website Lead & AI Developer</p>
+                    </div>
+                    <div class="author-links">
+                        <a href="https://www.linkedin.com/in/matthew-corvacchioli/" target="_blank" aria-label="Matthew's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Mcorvacc" target="_blank" aria-label="Matthew's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="images\JoshP-Photo.PNG" alt="Joshua Peeples - Lead Developer" class="author-photo">
+                    <div class="author-info">
+                        <h4>Joshua Peeples</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                    <div class="author-links">
+                        <a href="https://www.linkedin.com/in/joshua-peeples/" target="_blank" aria-label="Josh's LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Korecct" target="_blank" aria-label="Josh's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="images\AshtonM-Photo.png" alt="Ashton Miller - UI Design & Documentation" class="author-photo">
+                    <div class="author-info">
+                        <h4>Ashton Miller</h4>
+                        <p>UI Design & Documentation</p>
+                    </div>
+                    <div class="author-links">
+                        <a href="https://github.com/amill0156" target="_blank" aria-label="Ashton's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="images\DylanL-Photo.png" alt="Dylan Luong - Documentation Lead" class="author-photo">
+                    <div class="author-info">
+                        <h4>Dylan Luong</h4>
+                        <p>Documentation Lead</p>
+                    </div>
+                    <div class="author-links">
+                        <a href="https://github.com/DyliciousDylan" target="_blank" aria-label="Dylan's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="author-card">
+                    <img src="images\AllenS-Photo.png" alt="Allen Smith - Design & Documentation" class="author-photo">
+                    <div class="author-info">
+                        <h4>Allen Smith</h4>
+                        <p>Design & Documentation</p>
+                    </div>
+                    <div class="author-links">
+                        <a href="https://github.com/AKS229" target="_blank" aria-label="Allen's GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ChessAI Team</p>
+    </footer>
+</body>
+</html>

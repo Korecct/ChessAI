@@ -1,0 +1,511 @@
+        :root {
+            --background-color: #121212;
+            --text-color: #e0e0e0;
+            --primary-color: #ffffff;
+            --link-color: #ffffff;
+            --link-hover: #ff6262;
+            --section-bg: #1e1e1e;
+            --section-border: #ff6262;
+            --button-bg: #4c3838;
+            --button-hover: #3a2a2a;
+            --author-card-bg: #2c2c2c;
+            --author-card-hover: #444444;
+            --footer-bg: #1e1e1e;
+            --footer-text: #cccccc;
+            --highlight-color: #ff6262;
+            --box-bg: #2c2c2c;
+            --box-border: #ff6262;
+            --card-shadow: rgba(0, 0, 0, 0.2);
+            --icon-color: #ff6262;
+            --icon-hover-color: #ffffff;
+        }
+
+        /* Basic Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Logo Styling */
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: auto;
+            z-index: 1000;
+        }
+
+        /* Main Content Styling */
+        .container {
+            flex: 1;
+            padding: 80px 20px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+
+        /* Chess Board GIF */
+        .chess-gif-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .chess-gif {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px var(--card-shadow);
+            animation: float 6s ease-in-out infinite;
+            background: transparent;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Play Button */
+        .play-button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .gamemode-button {
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 220px;
+            height: 60px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+        }
+
+        .gamemode-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-45deg);
+            transition: all 0.5s;
+        }
+
+        .gamemode-button:hover::before {
+            left: 100%;
+        }
+
+        .gamemode-button:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-3px);
+            box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Two-Column Layout */
+        .two-column-container {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .left-column, .right-column {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* Links Sections */
+        .links-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .links-box {
+            background-color: var(--section-bg);
+            border: 2px solid var(--section-border);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px var(--card-shadow);
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+            margin: 0 auto 20px auto;
+        }
+
+        .links-box h3 {
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .links-box h3::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background-color: var(--section-border);
+        }
+
+        .links-box ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .links-box ul li a {
+            text-decoration: none;
+            color: var(--link-color);
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .links-box ul li a:hover {
+            background-color: var(--section-border);
+            color: var(--primary-color);
+        }
+
+        .links-box ul li a i {
+            color: var(--icon-color);
+            transition: color 0.3s;
+        }
+
+        .links-box ul li a:hover i {
+            color: var(--icon-hover-color);
+        }
+
+        /* Description Section */
+        .description-section {
+            background-color: var(--section-bg);
+            border: 2px solid var(--section-border);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px var(--card-shadow);
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .description-section h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        .description-section h3::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: var(--section-border);
+        }
+
+        .description-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .description-text {
+            color: var(--text-color);
+        }
+
+        .description-text h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .description-text p {
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Two-Column Layout with Captions */
+        .description-images {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .description-images figure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 45%;
+            margin: 0;
+        }
+
+        .description-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px var(--card-shadow);
+            transition: transform 0.3s;
+        }
+
+        .description-images img:hover {
+            transform: scale(1.05);
+        }
+
+        .description-images figcaption {
+            margin-top: 10px;
+            color: var(--primary-color);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Authors Section */
+        .authors-box {
+            background-color: var(--box-bg);
+            padding: 20px;
+            border: 2px solid var(--box-border);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px var(--card-shadow);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .authors-box h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .authors-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .author-card {
+            background-color: var(--author-card-bg);
+            width: 220px; 
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .author-photo {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .author-info {
+            padding: 15px;
+        }
+
+        .author-info h4 {
+            margin: 10px 0 5px 0;
+            font-size: 1.3rem;
+            color: var(--primary-color);
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 1rem;
+            color: #aaaaaa;
+        }
+
+        /* Authors Section - Social Links */
+        .author-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            padding-bottom: 15px;
+        }
+
+        .author-links a {
+            color: var(--icon-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .author-links a:hover {
+            color: var(--icon-hover-color);
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        footer a:hover {
+            color: var(--link-hover);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .two-column-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+            }
+
+            .authors-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .author-card {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .chess-gif {
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .gamemode-button {
+                width: 180px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .author-photo {
+                height: 150px;
+            }
+
+            .description-section {
+                padding: 15px;
+            }
+
+            .description-images figure {
+                max-width: 100%;
+            }
+
+            /* Responsive Author Links */
+            .author-links a {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                width: 50px;
+            }
+
+            .container {
+                padding: 80px 10px 10px 10px;
+            }
+
+            .chess-gif {
+                max-width: 300px;
+            }
+
+            .gamemode-button {
+                width: 140px;
+                height: 40px;
+                font-size: 1.1rem;
+            }
+
+            .links-box {
+                width: 100%;
+            }
+
+            .author-photo {
+                height: 120px;
+            }
+
+            .description-images img {
+                max-height: 200px;
+            }
+
+            .author-links a {
+                font-size: 1.1rem;
+            }
+        }
