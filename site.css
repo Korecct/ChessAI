@@ -142,17 +142,28 @@
             box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4);
         }
 
-        /* Two-Column Layout */
+        /* Three-Column Layout */
         .three-column-container {
             display: flex;
-            gap: 40px;
+            gap: 10px;
             margin-bottom: 40px;
             flex-wrap: wrap;
+            max-width: 3000px;
         }
 
-        .left-column, .middle-column, .right-column {
+        .left-column {
             flex: 1;
+            min-width: 200px;
+        }
+
+        .middle-column {
+            flex: 2;
             min-width: 280px;
+        }
+
+        .right-column {
+            flex: 1;
+            min-width: 200px;
         }
 
         /* Links Sections */
@@ -163,13 +174,14 @@
         }
 
         .links-box {
-            background-color: var(--section-bg);
+            background-color: var(--box-bg);
             border: 2px solid var(--section-border);
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 4px 8px var(--card-shadow);
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
             margin: 0 auto 20px auto;
+            max-width: 800px;
         }
 
         .links-box h3 {
@@ -178,6 +190,14 @@
             color: var(--primary-color);
             font-size: 1.5rem;
             border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+            position: relative;
+        }
+
+        .links-box h4 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 1.1rem;
             padding-bottom: 5px;
             position: relative;
         }
@@ -229,94 +249,123 @@
 
         /* Description Section */
         .description-section {
-            background-color: var(--section-bg);
+            background-color: var(--box-bg);
             border: 2px solid var(--section-border);
             border-radius: 10px;
             padding: 10px 20px 20px;
             box-shadow: 0 4px 8px var(--card-shadow);
             transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
+        
+        /* Description Section */
+        .description-section {
+            display: flex;
+            flex-direction: column;
+        }
 
+        /* Headings */
         .description-section h3 {
-            text-align: center;
-            margin-bottom: 20px;
+            font-size: 2rem;
             color: var(--primary-color);
-            font-size: 1.8rem;
+            text-align: center;
             position: relative;
+            margin-bottom: 20px;
         }
 
         .description-section h3::after {
             content: "";
             position: absolute;
             left: 50%;
-            bottom: -5px;
+            bottom: -10px;
             transform: translateX(-50%);
-            width: 40px;
-            height: 2px;
+            width: 60px;
+            height: 3px;
             background-color: var(--section-border);
-        }
-
-        .description-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .description-text {
-            color: var(--text-color);
+            border-radius: 2px;
         }
 
         .description-text h4 {
-            margin-top: 0;
-            color: var(--primary-color);
             font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 20px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .description-text h4::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: var(--section-border);
+            margin-top: 5px;
+            border-radius: 1px;
         }
 
         .description-text p {
-            line-height: 1.6;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .description-text ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: var(--text-color);
+        }
+
+        .description-text ul li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
         }
 
         /* Two-Column Layout with Captions */
         .description-images {
             display: flex;
-            flex-direction: row;
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
+            align-items: flex-start;
         }
 
         .description-images figure {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 45%;
+            flex: 1 1 45%;
+            max-width: 35%;
             margin: 0;
+            background-color: var(--box-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .description-images figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px var(--card-shadow);
         }
 
         .description-images img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px var(--card-shadow);
-            transition: transform 0.3s;
-        }
-
-        .description-images img:hover {
-            transform: scale(1.05);
+            display: block;
         }
 
         .description-images figcaption {
-            margin-top: 10px;
+            padding: 10px;
+            background-color: var(--section-bg);
             color: var(--primary-color);
-            font-size: 1rem;
             text-align: center;
+            font-size: 1rem;
         }
 
         /* Authors Section */
         .authors-box {
             background-color: var(--box-bg);
-            padding: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 2px;
+            padding-right: 2px;
             border: 2px solid var(--box-border);
             border-radius: 10px;
             box-shadow: 0 6px 12px var(--card-shadow);
@@ -330,6 +379,19 @@
             margin-bottom: 20px;
             font-size: 2rem;
             color: var(--primary-color);
+            position: relative;
+        }
+        
+        .authors-box h3::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--section-border);
+            border-radius: 2px;
         }
 
         .authors-list {
