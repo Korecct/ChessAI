@@ -364,8 +364,8 @@
             background-color: var(--box-bg);
             padding-top: 20px;
             padding-bottom: 20px;
-            padding-left: 2px;
-            padding-right: 2px;
+            padding-left: 1px;
+            padding-right: 1px;
             border: 2px solid var(--box-border);
             border-radius: 10px;
             box-shadow: 0 6px 12px var(--card-shadow);
@@ -398,12 +398,12 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 5px;
+            gap: 3px;
         }
 
         .author-card {
             background-color: var(--author-card-bg);
-            width: 180px; 
+            width: 175px; 
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
